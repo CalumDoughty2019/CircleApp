@@ -12,5 +12,8 @@ public class CircleTest {
         Circle c2 = new Circle(2.0);
         // Invoke public methods on instance c2, via dot operator.
         System.out.println("The circle has radius of " + c2.getRadius() + " and area of " + c2.getArea());
+
+        Circle c3 = new Circle(3.0);
+        System.out.println("The circle has radius of " + c3.getRadius() + " and area of " + c3.getArea() + " and perimeter of " + c3.getPerimeter());
     }
 }
