@@ -1,8 +1,12 @@
 public class Play {
     public static void main(String[] args) {
-        Circle circle = new Circle();
-        System.out.println(circle.getArea());
+        //Circle circle = new Circle();
+        //System.out.println(circle.getArea());
 
-        Shape circle2 = new Circle();
+        //Shape circle2 = new Circle();
+
+        Cylinders cylinders = new Cylinders();
+        cylinders.addCylinders();
+        cylinders.viewCylinders();
     }
 }

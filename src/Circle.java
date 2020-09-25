@@ -1,6 +1,7 @@
 public class Circle extends Shape{
     //variables
     private double radius;
+    private String colour;
 
     //getters and setters
     public double getRadius() {
@@ -9,6 +10,12 @@ public class Circle extends Shape{
     public void setRadius(double radius) {
         this.radius = radius;
     }
+    public String getColour() {
+        return colour;
+    }
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
 
 
     // The default constructor with no argument.
@@ -16,6 +23,7 @@ public class Circle extends Shape{
     public Circle() {
         super();
         radius = 1.0;
+        this.colour = "red";
     }
     // 2nd constructor with given radius, but color default
     public Circle(double radius) {
@@ -23,9 +31,10 @@ public class Circle extends Shape{
         this.radius = radius;
     }
     // 2nd constructor with given radius and colour values
-    public Circle(double radius, String colour, boolean filled) {
-        super(colour, filled);
+    public Circle(double radius, String colour) {
+        super();
         this.radius = radius;
+        this.colour = colour;
     }
 
     //methods & functions
@@ -41,6 +50,6 @@ public class Circle extends Shape{
 
     @Override
     public String toString(){
-        return Double.toString(radius);
+        return "Circle[radius=" + radius + ",colour=" + colour + "]";
     }
 }
