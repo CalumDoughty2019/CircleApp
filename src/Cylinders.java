@@ -38,6 +38,37 @@ public class Cylinders {
         }
     }
 
+    //used to create a number of cylinders
+    public void generateCylinders(){
+        Scanner scanner = new Scanner(System.in);
+        int numCylinders;
+        //Cylinder[] cylinders;
+        //double radius;
+
+        //could use an if here to throw error message (I have opted for do-while)
+        do {
+            System.out.println("Please enter number of cylinders: ");
+            numCylinders = scanner.nextInt();
+            cylinders = new Cylinder[numCylinders];
+            System.out.println("");
+        } while (numCylinders < 0 || numCylinders > 100);
+
+        for (int i = 0; i < cylinders.length; i++) {
+            Cylinder anotherOne = new Cylinder();
+            int j = i+1;
+            //System.out.println("Cylinder No. " + j + ": ");
+            //System.out.println("Please enter a radius: ");
+            anotherOne.setRadius(1 + (int)(Math.random() * ((10 - 1) + 1)));
+            anotherOne.setHeight(1 + (int)(Math.random() * ((10 - 1) + 1)));
+            anotherOne.setColour("red");
+
+            cylinders[i] = anotherOne;
+            System.out.println("");
+        }
+
+        viewCylinders();
+    }
+
     //Allow the user to view up to 100 cylinders
     public void viewCylinders(){
         for (int i = 0; i < cylinders.length; i++) {
